@@ -80,18 +80,3 @@ function Main() {
 }
 
 export default Main;
-
-// const mapStateToProps = state => ({
-//   amount: state.cart.reduce((amount, product) => {
-//     amount[product.id] = product.amount;
-//     return amount;
-//   }, {}),
-// });
-
-// const mapDispatchToProps = dispatch =>
-//   bindActionCreators(CartActions, dispatch);
-
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps,
-// )(Main);

@@ -55,6 +55,10 @@ export default function Cart({navigation}) {
     dispatch(updateAmountRequest(product.id, product.amount + 1));
   }
 
+  function remove(id) {
+    dispatch(removeFromCart(id));
+  }
+
   return (
     <ScrollView>
       <Container>
@@ -69,7 +73,7 @@ export default function Cart({navigation}) {
                       <ProductTitle>{p.title}</ProductTitle>
                       <ProductPrice>{p.priceFormatted}</ProductPrice>
                     </ProductDetails>
-                    <ProductDelete onPress={() => removeFromCart(p.id)}>
+                    <ProductDelete onPress={() => remove(p.id)}>
                       <Icon
                         name="delete-forever"
                         size={24}
